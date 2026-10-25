@@ -12,6 +12,14 @@
   ],
   "license": "MIT",
   "author": "Fuszenecker Róbert",
+  "homepage": "https://github.com/fuszenecker/promptuarium-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuszenecker/promptuarium-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fuszenecker/promptuarium-js/issues"
+  },
   "type": "module",
   "exports": {
     ".": {
