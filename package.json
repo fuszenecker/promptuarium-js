@@ -1,0 +1,45 @@
+{
+  "name": "promptuarium",
+  "version": "1.0.0",
+  "description": "Promptuarium: a space-efficient, streamable binary container for trees, where every node has data, metadata and children.",
+  "keywords": [
+    "promptuarium",
+    "binary",
+    "tree",
+    "container",
+    "serialization",
+    "streaming"
+  ],
+  "license": "MIT",
+  "author": "Fuszenecker Róbert",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --exclude test/pedit.test.ts",
+    "test:interop": "vitest run test/pedit.test.ts",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "prepublishOnly": "npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.3",
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
